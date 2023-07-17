@@ -1,9 +1,9 @@
 export const getLocalStorage = (toDo) => {
   if (localStorage.getItem('toDo')) {
     toDo.list = JSON.parse(localStorage.getItem('toDo'));
-    for (let i = 0; toDo.list.length > i; i += 1) {
-      toDo.createToDo(toDo.list[i]);
-    }
+    toDo.list.forEach(element => {
+      toDo.createToDo(element);
+    });
   }
 };
 
