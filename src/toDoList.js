@@ -13,8 +13,8 @@ export default class ToDoList {
     toDo.markUp = toDoItem;
 
     toDoItem.innerHTML = `
-    <input class="checkBox" type="checkbox" ${toDo.completed ? 'checked' : ''}>
-    <input class="description ${toDo.completed ? 'checkedTask' : ''}" value="${toDo.description}">
+    <input aria-label="Mark as completed" class="checkBox" type="checkbox" ${toDo.completed ? 'checked' : ''}>
+    <input aria-label="Edit your task" class="description ${toDo.completed ? 'checkedTask' : ''}" value="${toDo.description}">
     <div class="dragger">&#8942;</div>
     <div class="deleter hidden">&#128465;</div>
     `;
